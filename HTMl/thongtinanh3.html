@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin ảnh 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-size: cover;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #timkiem-search {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        #timkiem-vao {
+            padding: 8px;
+            width: 70%;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #phanchinh {
+            display: flex;
+            flex: 1;
+            overflow-y: hidden;
+        }
+
+        #bentrai {
+            flex: 0.7;
+            position: relative;
+        }
+
+        #anhchinh {
+            width: 900px;
+            height: 70vh;
+            object-fit: cover;
+            margin: 20px;
+        }
+
+        #phananhphu-benduoi {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .phananhphu {
+            width: 20%;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .phananhphu img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .phananhphu:hover img {
+            transform: scale(1.2);
+        }
+
+        #benphai {
+            flex: 0.3;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #thongtinanh {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        #thongtinanh h2 {
+            margin: 0;
+        }
+
+        #thongtinanh p {
+            margin: 5px 0;
+        }
+
+        #more-info-btn {
+            padding: 8px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #like,
+        #share,
+        #comment {
+            padding: 8px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        #anhnguoidung {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        li{
+            list-style: none;
+        }
+
+
+        .new {
+            background-color: rgb(151, 235, 134);
+            padding-left: 2px;
+            padding-right: 2px;
+            border-radius: 20%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+        }
+
+        .footer {
+            border-top: 1px solid #eaeaea;
+            margin-top: 60px;
+            display: flex;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .content-one {
+            margin-left: 20px;
+            width: 60%;
+        }
+
+        .link-icon li a {
+            margin-right: 23px;
+        }
+
+        .content-one p {
+            font-size: 17px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            color: rgb(121, 120, 120)
+        }
+
+        .content-two {
+            display: flex;
+            width: 40%;
+            margin-left: -40px;
+        }
+
+        .link-icon {
+            display: flex
+        }
+
+        .link-icon li a {
+            font-size: 18px;
+        }
+
+        .link-icon li a:hover {
+            color: rgb(149, 228, 204)
+        }
+
+        .one {
+            margin-right: 35px;
+        }
+
+        .link-one li a:hover,.link-two li a:hover,.link-three li a:hover {
+            text-decoration: underline;
+        }
+
+        .two {
+            margin-right: 35px;
+        }
+
+        .link-one li a,.link-two li a,.link-three li a {
+            text-decoration: none;
+            color: rgb(121, 120, 120)
+        }
+
+        .link-one li,.link-two li,.link-three li {
+            margin-bottom: 10px;
+        }
+
+        .by {
+            font-size: 12px;
+            margin-top: 40px;
+            background-color: rgb(211, 211, 211);
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-image: url(../Image/bgheader.webp);">
+        <a href="../HTMl/home.html"><img src="../Image/logo.svg" alt=""
+                style="width: 200px; height: 100ox; position: absolute; top: 5px; left: 10px;"></a>
+        <h1>Kho hình ảnh đẹp miễn phí chất lượng cao</h1>
+        <p>Kho hình ảnh đẹp miễn phí với hơn 1 triệu hình ảnh và video được chia sẻ bởi cộng đồng tài năng của chúng
+            tôi.
+
+        </p>
+        <div id="timkiem-search">
+            <input type="text" id="timkiem-vao" placeholder="Search...">
+        </div>
+    </header>
+
+    <div id="phanchinh">
+        <div id="bentrai">
+            <img id="anhchinh" src="../Image/anh3.jpg" alt="">
+            <div id="phananhphu-benduoi">
+                <div class="phananhphu">
+                    <img src="../Image/anh2.jpg" alt="Thumbnail 1">
+                </div>
+                <div class="phananhphu">
+                    <img src="../Image/anh1.jpg" alt="Thumbnail 2">
+                </div>
+                <div class="phananhphu">
+                    <img src="../Image/anh4.jpg" alt="Thumbnail 3">
+                </div>
+                <div class="phananhphu">
+                    <img src="../Image/anh5.jpg" alt="Thumbnail 4">
+                </div>
+            </div>
+        </div>
+
+        <div id="benphai">
+            <div id="thongtinanh">
+                <div id="nguoidung">
+                    <div id="anhnguoidung">
+                        <img src="../Image/avt.jpg" alt="User Avatar">
+                    </div>
+                    <p><strong>Đăng tải bởi:</strong> Trần Anh Quân</p>
+                </div>
+                <h2>Thông tin ảnh</h2>
+                <p>Ngày đăng tải: 27/07/2006</p>
+                <p>Giờ đăng tải: 22:05 p.m</p>
+                <p><strong>Like:</strong> <span id="like-count">0</span></p>
+                <button id="like" onclick="increaseLike()">Like</button>
+                <button id="share">Share</button>
+                <button id="comment">Comment</button>
+                <button id="more-info-btn" onclick="toggleMoreInfo()">Xem thêm</button>
+                <div id="more-info" style="display: none;">
+                    <p><strong>Kích thước:</strong> 1920x1080</p>
+                    <p><strong>Máy ảnh:</strong> Canon EOS 5D Mark IV</p>
+                    <p><strong>Địa điểm:</strong> Ngôi nhà cô đơn</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mainImage = document.getElementById('anhchinh');
+        const thumbnailImages = document.querySelectorAll('.phananhphu img');
+        const likeCount = document.getElementById('like-count');
+        const moreInfoContainer = document.getElementById('more-info');
+
+
+        const changeImage = (source) => {
+            mainImage.src = source;
+
+        };
+
+
+        thumbnailImages.forEach((thumbnail) => {
+            thumbnail.addEventListener('click', () => {
+                const thumbnailSource = thumbnail.src;
+                changeImage(thumbnailSource);
+            });
+        });
+
+        const increaseLike = () => {
+            let currentLikeCount = parseInt(likeCount.innerText);
+            likeCount.innerText = currentLikeCount + 1;
+        };
+
+
+        const toggleMoreInfo = () => {
+            moreInfoContainer.style.display = moreInfoContainer.style.display === 'none' ? 'block' : 'none';
+        };
+    </script>
+
+
+    <footer class="footer">
+        <div class="content-one">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Pixabay-logo.svg/2560px-Pixabay-logo.svg.png"
+                alt="image" width="200px" height="40px">
+            <p>Khám phá trên 4.6 triệu hình ảnh và video được chia sẻ bởi cộng đồng hào phòng của chúng tôi.</p>
+            <ul class="link-icon">
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></i></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </div>
+        <div class="content-two">
+            <div class="one">
+                <h3>Phát hiện</h3><br>
+                <ul class="link-one">
+                    <li><a href="#">Lựa chọn của biên tập viên</a></li>
+                    <li><a href="#">Bộ sưu tập được tuyển chọn</a></li>
+                    <li style="display: inline-block;margin-right: 5px;"><a href="#">Đài phát thanh Pixabay</a></li>
+                    <span class="new">Mới</span>
+                    <li><a href="#">Hình ảnh phổ biến</a></li>
+                    <li><a href="#">Video phổ biến</a></li>
+                    <li><a href="#">Nhac phổ biến </a></li>
+                    <li><a href="#">Các tìm kiếm phổ biến</a></li>
+                </ul>
+            </div>
+            <div class="two">
+                <h3>Cộng đồng</h3><br>
+                <ul class="link-two">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Diễn đàn</a></li>
+                    <li><a href="#">Người sáng tạo</a></li>
+                    <li><a href="#">Máy ảnh</a></li>
+                </ul>
+            </div>
+            <div class="three">
+                <h3>Giới thiệu</h3><br>
+                <ul class="link-three">
+                    <li><a href="http://">Thông tin về chúng tôi </a></li>
+                    <li><a href="http://">FAQ</a></li>
+                    <li><a href="http://">Tóm tắt giấy phép</a></li>
+                    <li><a href="http://">Điều khoản Dịch vụ</a></li>
+                    <li><a href="http://">Chính sách bảo mật</a></li>
+                    <li><a href="http://">Chính sách cooki</a></li>
+                    <li><a href="http://">API</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

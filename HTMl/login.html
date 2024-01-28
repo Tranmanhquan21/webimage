@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/login.css">
+  <script src="../JavaScript/login.js"></script>
+</head>
+<body>
+  <a href="../HTMl/home.html"><img class="brand-logo" src="../Image/logo.svg" alt="image" width="200px" height="70px"></a>
+  <div class="wrapper">
+    <form action="../HTMl/home.html">
+      <h1 id="form-title">Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+        <i class="fas fa-lock"></i>
+      </div>
+      <div class="choose">
+        <select id="language" name="language" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="zh">中文</option>
+        </select>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox"> <span id="remember-text">Remember me</span></label>
+        <a href="#"><span id="forgot-text">Forgot Password ?</span></a>
+      </div>
+      <button type="submit" class="button" id="login-button">Login</button>
+      <div class="register-link">
+        <p id="register-text">Don't have an account ? <a href="../HTMl/Register.html" id="register-link">Register</a></p>
+      </div>
+      <div class="link">
+        <ul class="list-link">
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-xl" style="color: #74C0FC;"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-google fa-xl" style="color: #1ad48d;"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok fa-xl" style="color: #cbf380;"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-xl" style="color: #74C0FC;"></i></a></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

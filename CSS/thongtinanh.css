@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#timkiem-search {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#timkiem-vao {
+    padding: 8px;
+    width: 70%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#phanchinh {
+    display: flex;
+    flex: 1;
+    overflow-y: hidden;
+}
+
+#bentrai {
+    flex: 0.7;
+    position: relative;
+}
+
+#anhchinh {
+    width: 900px;
+    height: 70vh;
+    object-fit: cover;
+    margin: 20px;
+}
+
+#phananhphu-benduoi {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.phananhphu {
+    width: 20%;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.phananhphu img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.phananhphu:hover img {
+    transform: scale(1.2);
+}
+
+#benphai {
+    flex: 0.3;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#thongtinanh {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#thongtinanh h2 {
+    margin: 0;
+}
+
+#thongtinanh p {
+    margin: 5px 0;
+}
+
+#more-info-btn {
+    padding: 8px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#like, #share, #comment {
+    padding: 8px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#anhnguoidung {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+
+
+.new {
+background-color: rgb(151, 235, 134);
+padding-left: 2px;
+padding-right: 2px;
+border-radius: 20%;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: white;
+}
+
+.footer {
+border-top: 1px solid #eaeaea;
+margin-top: 60px;
+display: flex;
+width: 100%;
+padding-top: 20px;
+}
+
+.content-one {
+margin-left: 20px;
+width: 60%;
+}
+
+.link-icon li a {
+margin-right: 23px;
+}
+
+.content-one p {
+font-size: 17px;
+margin-top: 15px;
+margin-bottom: 20px;
+color: rgb(173, 173, 173)
+}
+
+.content-two {
+display: flex;
+width: 40%;
+margin-left: -40px;
+}
+
+.link-icon {
+display: flex
+}
+
+.link-icon li a {
+font-size: 18px;
+}
+
+.link-icon li a:hover {
+color: rgb(149, 228, 204)
+}
+
+.one {
+margin-right: 35px;
+}
+
+.link-one li a {
+text-decoration: none;
+color: rgb(173, 173, 173);
+}
+
+.link-one li a:hover {
+
+text-decoration: underline;
+}
+
+.link-two li a:hover {
+text-decoration: underline;
+}
+
+.link-three li a:hover {
+text-decoration: underline;
+}
+
+.two {
+margin-right: 35px;
+}
+
+.link-two li a {
+text-decoration: none;
+color: rgb(173, 173, 173)
+}
+
+.link-three li a {
+text-decoration: none;
+color: rgb(173, 173, 173)
+}
+
+.link-one li {
+margin-bottom: 10px;
+}
+
+.link-two li {
+margin-bottom: 10px;
+}
+
+.link-three li {
+margin-bottom: 10px;
+}
+
+.by {
+font-size: 12px;
+margin-top: 40px;
+background-color: rgb(211, 211, 211);
+padding: 30px;
+text-align: center;
+}
